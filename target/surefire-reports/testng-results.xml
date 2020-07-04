@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "result">User is on login page (PASSED : 9s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Click SignUp (PASSED : 1s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Clicks SignUp via gmail (FAILED : 1s)</div>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-07-04T09:47:01Z" name="Surefire suite" finished-at="2020-07-04T09:47:16Z" duration-ms="15098">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@55183b20]" name="scenario" class="Runner.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2020-07-04T09:47:01Z" name="Surefire test" finished-at="2020-07-04T09:47:16Z" duration-ms="15098">
+      <class name="Runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:Runner.TestRunner@55183b20]" started-at="2020-07-04T15:17:01Z" name="setUpClass" finished-at="2020-07-04T15:17:01Z" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@55183b20]" started-at="2020-07-04T15:17:01Z" name="scenario" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2020-07-04T15:17:16Z" duration-ms="14717" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Positive login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["login into application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Sign in – Google Accounts] but found [Sign in – Google accounts]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Sign in – Google Accounts] but found [Sign in – Google accounts]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at StepDefinition.Stepdef.Clicks_SignUp_via_gmail(Stepdef.java:104)
+	at ✽.Clicks SignUp via gmail(C:/Users/venka/eclipse-workspace/cucumberTng/src/test/java/Features/01_login.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">User is on login page (PASSED : 9s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Click SignUp (PASSED : 1s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Clicks SignUp via gmail (FAILED : 1s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- scenario -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Runner.TestRunner@55183b20]" started-at="2020-07-04T15:17:16Z" name="teardown" finished-at="2020-07-04T15:17:16Z" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Runner.TestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

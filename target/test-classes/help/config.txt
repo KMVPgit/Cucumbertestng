@@ -1,0 +1,5 @@
+browser=chrome
+baseurl=https://www.referhire.com/login
+baseurl1=https://www.referhire.com/
+username=test
+pwd=pwd

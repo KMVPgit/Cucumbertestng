@@ -1,0 +1,24 @@
+2020-07-04 12:55:57.753 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 12:55:57.766 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 13:00:19.920 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 13:00:19.926 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 13:11:21.853 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 13:11:21.863 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 13:11:24.970 [main] INFO  refersignupPage.logger - Clicked on Signupbygmail
+2020-07-04 13:13:17.206 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 13:13:17.218 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 13:13:20.807 [main] INFO  refersignupPage.logger - Clicked on Signupbygmail
+2020-07-04 13:15:14.708 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 13:15:14.716 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 13:15:19.132 [main] INFO  refersignupPage.logger - Clicked on Signupbygmail
+2020-07-04 13:20:57.953 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 13:20:57.961 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 13:21:01.415 [main] INFO  refersignupPage.logger - Clicked on Signupbygmail
+2020-07-04 13:29:30.936 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 13:29:30.943 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 13:29:37.325 [main] INFO  refersignupPage.logger - Clicked on Signupbygmail
+2020-07-04 15:16:06.061 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 15:16:06.065 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 15:17:10.964 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-04 15:17:10.967 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-04 15:17:14.294 [main] INFO  refersignupPage.logger - Clicked on Signupbygmail

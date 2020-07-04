@@ -1,0 +1,5 @@
+2020-07-03 22:38:59.055 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-03 22:43:19.184 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-03 22:43:19.188 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-03 23:00:36.202 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-03 23:00:36.205 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
