@@ -2,32 +2,32 @@ package TestBase;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.core.Logger;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import cucumber.api.Scenario;
-import cucumber.api.java.After;
-
 import org.openqa.selenium.chrome.ChromeDriver;
 import help.utilitieshelp;
-import jdk.internal.jline.internal.Log;
-import tContext.testContext;
 
 public class WebDriverManager {
 	
 	
-	public static WebDriver driver;
+	private WebDriver driver;
+	private Wait<WebDriver> wait;
 	// public static String driverType;
 	 
 	  utilitieshelp up;
@@ -89,6 +89,13 @@ public class WebDriverManager {
 	 }
 	 } 
    
+   public Wait<WebDriver> getwait() {
+		 wait = new FluentWait<WebDriver>(driver)
+				 .withTimeout(Duration.ofSeconds(30))
+			       .pollingEvery(Duration.ofSeconds(5))
+			       .ignoring(NoSuchElementException.class);
+		return wait;
+		}
    
    	public void tearDown(Scenario scenario) throws IOException {
     //   Scenario scenario=(Scenario)testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
@@ -98,9 +105,10 @@ public class WebDriverManager {
        try {
        TakesScreenshot ts = (TakesScreenshot) driver;
        byte[] sourcePath = ts.getScreenshotAs(OutputType.BYTES);
+       File sourcePathfile = ts.getScreenshotAs(OutputType.FILE);
        File destinationPath = new File("C:\\Users\\venka\\eclipse-workspace\\cucumberTng" + "\\target\\cucumber-reports\\screenshots\\" + screenshotName + ".png");
      //  System.getProperty((“user.dir”) + “\\target\\cucumber-reports\\screenshots\\” + screenshotName + “.png”);
-     //  FileUtils.copyFile(sourcePath, destinationPath);
+       FileUtils.copyFile(sourcePathfile, destinationPath);
        scenario.embed(sourcePath, "image/png"); 
        
          if (driver != null ) {

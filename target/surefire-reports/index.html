@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,10 +102,24 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="Runner.TestRunner" class="method navigator-link" hash-for-method="scenario(&quot;Positive login&quot;, &quot;login into application&quot;)">scenario("Positive login", "login into application")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="Runner.TestRunner" class="method navigator-link" hash-for-method="scenario(&quot;Register&quot;, &quot;create registeration&quot;)">scenario("Register", "create registeration")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="Runner.TestRunner" class="method navigator-link" hash-for-method="scenario(&quot;Positive login&quot;, &quot;login into application&quot;)">scenario("Positive login", "login into application")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -125,14 +139,28 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="scenario(&quot;Positive login&quot;, &quot;login into application&quot;)">
-                  </a> <!-- scenario("Positive login", "login into application") -->
+                  <a name="scenario(&quot;Register&quot;, &quot;create registeration&quot;)">
+                  </a> <!-- scenario("Register", "create registeration") -->
                   <span class="method-name">scenario</span>
-                  <span class="parameters">("Positive login", "login into application")</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Sign in – Google Accounts] but found [Sign in – Google accounts]
-	at StepDefinition.Stepdef.Clicks_SignUp_via_gmail(Stepdef.java:104)
-	at ✽.Clicks SignUp via gmail(C:/Users/venka/eclipse-workspace/cucumberTng/src/test/java/Features/01_login.feature:5)
-... Removed 6 stack frames
+                  <span class="parameters">("Register", "create registeration")</span>
+                  <div class="stack-trace">org.picocontainer.PicoCompositionException: Duplicate Keys not allowed. Duplicate for &apos;class StepDefinition.Stepdef&apos;
+	at org.picocontainer.DefaultPicoContainer.addAdapterInternal(DefaultPicoContainer.java:438)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:548)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:501)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:488)
+	at cucumber.runtime.java.picocontainer.PicoFactory.start(PicoFactory.java:22)
+	at cucumber.runtime.java.JavaBackend.buildWorld(JavaBackend.java:116)
+	at cucumber.runner.Runner.buildBackendWorlds(Runner.java:155)
+	at cucumber.runner.Runner.runPickle(Runner.java:78)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:84)
+	at Runner.TestRunner.scenario(TestRunner.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 9 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Feature)                  </em>
@@ -140,6 +168,24 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Runner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="scenario(&quot;Positive login&quot;, &quot;login into application&quot;)">
+                  </a> <!-- scenario("Positive login", "login into application") -->
+                  <span class="method-name">scenario</span>
+                  <span class="parameters">("Positive login", "login into application")</span>
+                  <em>
+(Runs Cucumber Feature)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -200,16 +246,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'scenario')
 data.setCell(0, 2, 'Runner.TestRunner')
-data.setCell(0, 3, 14717);
+data.setCell(0, 3, 22835);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'scenario')
+data.setCell(1, 2, 'Runner.TestRunner')
+data.setCell(1, 3, 211);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -223,9 +273,8 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">scenario("Positive login", "login into application")</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><div "result">User is on login page (PASSED : 9s)</div></span>
+                <span class="reporter-method-output"><div "result">User is on login page (PASSED : 19s)</div></span>
                 <span class="reporter-method-output"><div "result">Click SignUp (PASSED : 1s)</div></span>
-                <span class="reporter-method-output"><div "result">Clicks SignUp via gmail (FAILED : 1s)</div></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -251,12 +300,16 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
+                <span class="method-name">scenario("Register", "create registeration")</span>
+                <span class="method-start">1551 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">scenario("Positive login", "login into application")</span>
-                <span class="method-start">351 ms</span>
+                <span class="method-start">1551 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">15072 ms</span>
+                <span class="method-start">24388 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

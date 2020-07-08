@@ -3,33 +3,32 @@ package Runner;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import PageObjects.loginPage;
 import TestBase.WebDriverManager;
 import cucumber.api.CucumberOptions;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.PickleEventWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
+
+//import io.cucumber.testng.AbstractTestNGCucumberTests;
+
 
 @CucumberOptions(
 		features = "C:\\Users\\venka\\eclipse-workspace\\cucumberTng\\src\\test\\java\\Features\\",
 		//"C:\\Users\\venka\\eclipse-workspace\\cucumberTng\\src\\test\\java\\Features\\login.feature",
 		glue = {"StepDefinition"},
 		tags ="",
-		format = {"pretty", "html:target/cucumber-reports/cucumber-pretty"},
+		format = {"pretty", "html:target/cucumber-reports/cucumber-pretty/"  },
 		plugin = "json:target/cucumber-reports/CucumberTestReport.json/" ,
 		//"your.package.TestEventHandlerPlugin",
 		
@@ -45,7 +44,7 @@ public class TestRunner {
 	
 	private TestNGCucumberRunner testNGCucumberRunner;
 	WebDriver driver;
-	private WebDriverManager webdrivermanager;
+	
 	
 	@BeforeClass(alwaysRun = true)
  public void setUpClass() {
@@ -58,6 +57,8 @@ public class TestRunner {
     public void scenario(PickleEventWrapper pickleEvent, CucumberFeatureWrapper cucumberFeature) throws Throwable {
         testNGCucumberRunner.runScenario(pickleEvent.getPickleEvent());
 	}
+	
+	
 	
 	@After
 	public void tearDownss(Scenario scenario) throws IOException {
@@ -115,13 +116,18 @@ public class TestRunner {
 	
 	*/
 	
-	
+	/*
+	@Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }*/
 
     
 
 	
 	
-	@DataProvider
+	@DataProvider(parallel = true)
 	public Object[][] scenarios(){
 		return testNGCucumberRunner.provideScenarios();
 	}

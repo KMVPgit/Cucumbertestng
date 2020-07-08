@@ -11,7 +11,6 @@ import PageObjects.PageBase;
 import PageObjects.loginPage;
 import PageObjects.pageObjectsManager;
 import PageObjects.refersignupPage;
-import PageObjects.registrationPage;
 import TestBase.WebDriverManager;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -19,21 +18,20 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import tContext.testContext;
 
-public class Stepdef { 
-	loginPage lp;
-	registrationPage registrationpage;
+public class registrationstepdef {
+	refersignupPage refersignuppage;
 	testContext testcontext;
+	loginPage lp;
 	Logger log;
 	WebDriverManager webdrivermanager;
 	pageObjectsManager pageobjectsmanger;
 	PageBase pagebase;
-	refersignupPage refersignuppage;
 	
-	public Stepdef(testContext testcontext)  {
+	public registrationstepdef(testContext testcontext)  {
 		try {
 			 this.testcontext =  testcontext;	
-			 log = LogManager.getLogger("Stepdef.logger");
-		lp =	testContext.getpageobjectsmanager().getloginpage();
+			 log = LogManager.getLogger("registrationstepdef.logger");
+		
 		pagebase =	testContext.getpageobjectsmanager().getPageBase();
 		refersignuppage =	testContext.getpageobjectsmanager().getrefersignupPage();
 	//	log.info("Constructor");
@@ -43,60 +41,44 @@ public class Stepdef {
 			}
 	}
 	
-	
 	@Test
-	@Given ("^User is on login page$")
-	public void User_is_on_login_page() throws Exception {
+	@Given ("^User is on registration page$")
+	public void User_is_on_registration_page() throws Exception {
 		try {
 			String title = lp.getlogintitle();
 		log.info("User_is_on_login_page" + title );
-			Assert.assertEquals(title, "Sign Up");		
-			/* Free crm
-			String regtitle = null;
-			String title = lp.getlogintitle();			
-			testContext.getpageobjectsmanager().getloginpage().clicksignup();
-			log.info("User_is_on_login_page" + title );
-			Assert.assertEquals(title, "Free CRM #1 cloud software for any business large or small");
-			regtitle = testContext.getpageobjectsmanager().getregistrationPage().getregistrationtitle();			
-			Assert.assertEquals(regtitle, "Cogmento CRM");	
-			//Free CRM #1 cloud software for any business large or small
-			System.out.println("User is on Login Page");		*/
-	}
+			Assert.assertEquals(title, "Sign In");
+			lp.clickReferSignup();
+			Assert.assertEquals(pagebase.getpageTitle(), "Sign Up");
+		}
 catch (Exception e) {
 	e.printStackTrace();
 	}
 }
 	@Test
-	@Then("^Click SignUp$")
+	@Then("^Click gmail SignUp$")
 	//("^Enter Username$")
-	public void Click_SignUp() throws Exception {
+	public void Click_gmail_SignUp() throws Exception {
 		try {				
-			lp.clickReferSignup();
-			Assert.assertEquals(pagebase.getpageTitle(), "Sign Up");
-			
-			
-			//lp.clicksignup();
-	//		log.info("Enter_Username clicksignup");
-		//	Assert.assertEquals(2, 2);
-			System.out.println("Entered UN");		
-	}
+			refersignuppage.clicksignupbygmail();			
+            Assert.assertEquals(pagebase.getpageTitle(), "Sign in – Google Accounts");	
+		}
 catch (Exception e) {
 	e.printStackTrace();}
 }
 	
-	@Test
-	@Then ("^Clicks SignUp via gmail$")
-	public void Clicks_SignUp_via_gmail() throws Exception{
+/*	@Test
+	@Then ("^Enter gmail$")
+	public void Enter_gmail() throws Exception{
 		try {
-			refersignuppage.clicksignupbygmail();
-			
+			refersignuppage.clicksignupbygmail();			
             Assert.assertEquals(pagebase.getpageTitle(), "Sign in – Google Accounts");			
 	 }
 catch (Exception e) {
 	e.printStackTrace();}
      }
-	
-/*	@Test
+	*/
+	@Test
 	@Then ("^click submit$")
 	public void click_submit() throws Exception {
 		try {
@@ -107,7 +89,7 @@ catch (Exception e) {
 	e.printStackTrace(); 
 	}
 }
-*/
+
 	@After
 	public void afterscenario(Scenario scenario) throws IOException {
      //   Scenario scenario=(Scenario)testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
@@ -117,4 +99,3 @@ catch (Exception e) {
 	
 	
 }
-

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jul 04 15:17:01 IST 2020</td>
+<td>Started on:</td><td>Tue Jul 07 11:22:46 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>15 seconds (15098 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24456 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,31 +75,74 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='Runner.TestRunner.scenario()'><b>scenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Register", "create registeration"</td>
+<td><div><pre>org.picocontainer.PicoCompositionException: Duplicate Keys not allowed. Duplicate for &apos;class StepDefinition.Stepdef&apos;
+	at org.picocontainer.DefaultPicoContainer.addAdapterInternal(DefaultPicoContainer.java:438)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:548)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:501)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:488)
+	at cucumber.runtime.java.picocontainer.PicoFactory.start(PicoFactory.java:22)
+	at cucumber.runtime.java.JavaBackend.buildWorld(JavaBackend.java:116)
+	at cucumber.runner.Runner.buildBackendWorlds(Runner.java:155)
+	at cucumber.runner.Runner.runPickle(Runner.java:78)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:84)
+	at Runner.TestRunner.scenario(TestRunner.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2083149074", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2083149074'><pre>org.picocontainer.PicoCompositionException: Duplicate Keys not allowed. Duplicate for &apos;class StepDefinition.Stepdef&apos;
+	at org.picocontainer.DefaultPicoContainer.addAdapterInternal(DefaultPicoContainer.java:438)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:548)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:501)
+	at org.picocontainer.DefaultPicoContainer.addComponent(DefaultPicoContainer.java:488)
+	at cucumber.runtime.java.picocontainer.PicoFactory.start(PicoFactory.java:22)
+	at cucumber.runtime.java.JavaBackend.buildWorld(JavaBackend.java:116)
+	at cucumber.runner.Runner.buildBackendWorlds(Runner.java:155)
+	at cucumber.runner.Runner.runPickle(Runner.java:78)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:84)
+	at Runner.TestRunner.scenario(TestRunner.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runner.TestRunner@55183b20</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
 <td title='Runner.TestRunner.scenario()'><b>scenario</b><br>Test class: Runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Positive login", "login into application"<br/>
-<a href="#Output-2031882979" onClick='toggleBox("Output-2031882979", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-278187933" onClick='toggleBox("Output-278187933", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2031882979" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2031882979">
-<div "result">User is on login page (PASSED : 9s)</div><br/>
+<a href="#Output-278187933" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-278187933">
+<div "result">User is on login page (PASSED : 19s)</div><br/>
 <div "result">Click SignUp (PASSED : 1s)</div><br/>
-<div "result">Clicks SignUp via gmail (FAILED : 1s)</div><br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [Sign in – Google Accounts] but found [Sign in – Google accounts]
-	at StepDefinition.Stepdef.Clicks_SignUp_via_gmail(Stepdef.java:104)
-	at ?.Clicks SignUp via gmail(C:/Users/venka/eclipse-workspace/cucumberTng/src/test/java/Features/01_login.feature:5)
-... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2031882979", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2031882979'><pre>java.lang.AssertionError: expected [Sign in – Google Accounts] but found [Sign in – Google accounts]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at StepDefinition.Stepdef.Clicks_SignUp_via_gmail(Stepdef.java:104)
-	at ?.Clicks SignUp via gmail(C:/Users/venka/eclipse-workspace/cucumberTng/src/test/java/Features/01_login.feature:5)
-</pre></div></td>
-<td>14</td>
+<td></td>
+<td>22</td>
 <td>Runner.TestRunner@55183b20</td></tr>
 </table><p>
 </body>

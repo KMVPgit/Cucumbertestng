@@ -1,7 +1,9 @@
 PageObjects\PageBase.class
 PageObjects\loginPage.class
+PageObjects\refersignupPage.class
 StepDefinition\Stepdef1.class
 tContext\testContext.class
+PageObjects\registrationPage.class
 Runner\TestRunner.class
 PageObjects\pageObjectsManager.class
 TestBase\testbase.class

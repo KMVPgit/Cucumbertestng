@@ -1,0 +1,3 @@
+2020-07-05 18:41:13.334 [main] INFO  loginPage.logger - Login page title = Sign In
+2020-07-05 18:41:13.337 [main] INFO  Stepdef.logger - User_is_on_login_pageSign In
+2020-07-05 18:41:17.243 [main] INFO  refersignupPage.logger - Clicked on Signupbygmail

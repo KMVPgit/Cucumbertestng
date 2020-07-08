@@ -1,7 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.99 s <<< FAILURE! - in TestSuite
-Runner.TestRunner.scenario  Time elapsed: 14.722 s  <<< FAILURE!
-java.lang.AssertionError: expected [Sign in – Google Accounts] but found [Sign in – Google accounts]
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 25.669 s <<< FAILURE! - in TestSuite
+Runner.TestRunner.scenario  Time elapsed: 0.225 s  <<< FAILURE!
+org.picocontainer.PicoCompositionException: Duplicate Keys not allowed. Duplicate for 'class StepDefinition.Stepdef'
+	at Runner.TestRunner.scenario(TestRunner.java:58)
 
